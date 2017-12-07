@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import BarChart from './BarChart';
 import WorldMap from './WorldMap';
+import StreamGraph from './StreamGraph';
 import worldData from './world';
 import { range } from 'd3-array';
 import { scaleThreshold } from 'd3-scale';
@@ -27,6 +28,13 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>d3-projects-react dashboard</h2>
+        </div>
+        <div>
+          <StreamGraph
+            colourScale={colourScale}
+            data={appData}
+            size={[1000, 250]}
+          />
         </div>
         <div>
           <WorldMap
